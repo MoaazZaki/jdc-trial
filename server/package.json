@@ -1,0 +1,37 @@
+{
+  "name": "jdc-trial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoaazZaki/jdc-trial.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MoaazZaki/jdc-trial/issues"
+  },
+  "homepage": "https://github.com/MoaazZaki/jdc-trial#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "bundledDependencies": [
+    "express"
+  ],
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-cli": "^2.0.1",
+    "gulp-replace": "^1.0.0",
+    "gulp-run": "^1.7.1",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
