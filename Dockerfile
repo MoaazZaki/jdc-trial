@@ -8,10 +8,10 @@ WORKDIR /usr/src/app
 COPY server/ ./server/
 RUN cd server && npm install && npm run build
 
-FROM node
-WORKDIR /usr/src/app/
-COPY --from=client-build /usr/src/app/client/build ./client/build
-COPY --from=server-build /usr/src/app/server/build ./server/build
+#FROM node
+#WORKDIR /usr/src/app/
+#COPY --from=client-build /usr/src/app/client/build ./client/build
+#COPY --from=server-build /usr/src/app/server/build ./server/build
 RUN ls *
 
 EXPOSE 3080
