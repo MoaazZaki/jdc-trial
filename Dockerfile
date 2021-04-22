@@ -2,7 +2,7 @@ FROM node
 
 WORKDIR /usr/src/app
 COPY client/ ./client/
-RUN cd client && npm install && npm run build && npm install -g serve &&
+RUN cd client && npm install && npm run build && npm install -g serve
 
 WORKDIR /usr/src/app
 COPY server/ ./server/
