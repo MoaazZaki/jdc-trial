@@ -1,3 +1,3 @@
 #!/bin/bash
 
-node ./server/build/server.bundle.js & serve -s build && fg 
+serve -s ./client/build & node ./server/build/server.bundle.js && fg 
