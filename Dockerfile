@@ -13,7 +13,7 @@ WORKDIR /usr/src/app/
 COPY --from=client-build /usr/src/app/client/build ./client/build
 COPY --from=server-build /usr/src/app/server/build ./server/build
 
-RUN ls server
+RUN ls ./server/build
 RUN ls client
 
 EXPOSE 3080
