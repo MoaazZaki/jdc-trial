@@ -1,0 +1,21 @@
+version: "3"
+services: 
+    client:
+        image: jdc-client
+        stdin_open: true
+        ports:
+            - "3000:3000"
+        networks: 
+            - jdc-trial-network
+    
+    server:
+        image: jdc-server
+        ports:
+            - "3001:3001"
+        networks: 
+            - jdc-trial-network
+
+networks: 
+    jdc-trial-network:
+        driver: bridge
+    

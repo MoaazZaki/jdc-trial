@@ -6,9 +6,10 @@ function App() {
   const [data, setData] = React.useState(null);
 
   React.useEffect(() => {
-    fetch("/api")
+    fetch(process.env.REACT_APP_BACKEND_BASE_URL+"/api")
       .then((res) => res.json())
-      .then((data) => setData(data.message));
+      .then((data) => setData(data.message))
+      .catch(console.log);
   }, []);
 
   return (
