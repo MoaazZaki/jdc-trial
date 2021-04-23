@@ -16,7 +16,7 @@ app.use(
 app.options('*', cors());
 
 app.get("/api", (req, res) => {
-  res.json({ message: "Hello from server!" });
+  res.json({ message: "Yaaaaaaaaaaay!" });
 });
 
 app.listen(PORT, () => {
