@@ -1,7 +1,8 @@
 version: "3"
 services: 
     client:
-        image: jdc-client
+        build: ./client
+        image: moaazzaki/jdc-client:latest
         stdin_open: true
         ports:
             - "3000:3000"
@@ -9,7 +10,8 @@ services:
             - jdc-trial-network
     
     server:
-        image: jdc-server
+        build: ./server
+        image: moaazzaki/jdc-server:latest
         ports:
             - "3001:3001"
         networks: 
