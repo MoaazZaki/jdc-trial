@@ -11,3 +11,10 @@ docker run \
 --rm \
 -p 3001:3001 \
 moaazzaki/jdc-server
+
+az acr import \
+  --name jdcClient \
+  --source docker.io/moaazzaki/jdc-client:latest \
+  --image jdc-client:latest \
+  --username moaazzaki \
+  --password meZooZem1999

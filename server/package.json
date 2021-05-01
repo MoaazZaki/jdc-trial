@@ -20,7 +20,10 @@
   "homepage": "https://github.com/MoaazZaki/jdc-trial#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nodemailer": "^6.6.0",
+    "nodemailer-sendgrid": "^1.0.3"
   },
   "bundledDependencies": [
     "express"
