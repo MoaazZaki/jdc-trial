@@ -1,7 +1,7 @@
 pipeline { 
     environment { 
-        user = 'moaazzaki'
-        pass = 'meZooZem1999'
+        user = ' '
+        pass = ' '
         serverImage = 'jdc-server' 
         clientImage = 'jdc-client'
         registryCredential = 'docker-jenkins' 
