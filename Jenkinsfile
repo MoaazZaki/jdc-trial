@@ -1,7 +1,7 @@
 pipeline { 
     environment { 
-        serverRegistry = "moaazzaki/jdc-server"
-        clientRegistry = "moaazzaki/jdc-client"
+        user = 'moaazzaki'
+        pass = 'meZooZem1999'
         serverImage = 'jdc-server' 
         clientImage = 'jdc-client'
         registryCredential = 'docker-jenkins' 
@@ -14,21 +14,24 @@ pipeline {
                 git 'https://github.com/MoaazZaki/jdc-trial.git' 
             }
         } 
+        stage('Logging to dockerhub account') { 
+            steps { 
+                script { 
+                    sh 'docker login -u ' + user + ' -p ' + pass
+                }
+            } 
+        }
         stage('Building our image') { 
             steps { 
                 script { 
-                    serverImage = docker.build serverRegistry
-                    clientImage = docker.build clientRegistry
+                    sh 'docker-compose build --pull'
                 }
             } 
         }
         stage('Deploy our image') { 
             steps { 
                 script { 
-                    docker.withRegistry( '', registryCredential ) { 
-                        serverImage.push() 
-                        clientImage.push() 
-                    }
+                    sh 'docker-compose push'
                 } 
             }
         } 
