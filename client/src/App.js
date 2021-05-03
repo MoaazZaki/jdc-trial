@@ -7,7 +7,7 @@ function App() {
   const [emailData, setEmailData] = React.useState(null);
 
   React.useEffect(() => {
-    fetch(process.env.REACT_APP_BACKEND_BASE_URL+"/api")
+    fetch(process.env.REACT_APP_BACKEND_BASE_URL)
       .then((res) => res.json())
       .then((data) => setData(data.message))
       .catch(console.log);

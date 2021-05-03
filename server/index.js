@@ -19,7 +19,7 @@ app.use(
 );
 app.options('*', cors());
 
-app.get("/api", (req, res) => {
+app.get("/", (req, res) => {
   res.json({ message: "Hello from server!" });
 });
 

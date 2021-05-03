@@ -3,6 +3,7 @@ services:
     client:
         build: ./client
         image: moaazzaki/jdc-client:latest
+        container_name: client
         stdin_open: true
         ports:
             - "3000:3000"
@@ -12,6 +13,7 @@ services:
     server:
         build: ./server
         image: moaazzaki/jdc-server:latest
+        container_name: server
         ports:
             - "3001:3001"
         networks: 
@@ -20,4 +22,3 @@ services:
 networks: 
     jdc-trial-network:
         driver: bridge
-    

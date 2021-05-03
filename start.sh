@@ -1,20 +1,14 @@
 #!/bin/bash
-
-docker run \
-    -it \
-    --rm \
-    -p 3000:3000 \
-    -e CHOKIDAR_USEPOLLING=true \
-    moaazzaki/jdc-client
-    
-docker run \
---rm \
--p 3001:3001 \
-moaazzaki/jdc-server
-
-az acr import \
-  --name jdcClient \
-  --source docker.io/moaazzaki/jdc-client:latest \
-  --image jdc-client:latest \
-  --username moaazzaki \
-  --password meZooZem1999
+sudo apt update
+sudo snap install docker 
+sudo apt install nginx
+sudo docker login -u moaazzaki -p meZooZem1999
+git clone https://MoaazZaki:meZooZem1999@github.com/MoaazZaki/jdc-trial.git
+cd /etc/nginx/sites-enabled
+sudo chmod 777 default
+cp ~/jdc-trial/default default
+cd
+sudo nginx -s reload
+cd jdc-trial
+sudo docker-compose up
+sudo docker update --restart unless-stopped $(sudo docker ps -q)
