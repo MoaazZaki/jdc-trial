@@ -20,7 +20,7 @@ app.use(
 app.options('*', cors());
 
 app.get("/", (req, res) => {
-  res.json({ message: "Hello from server!" });
+  res.json({ message: "Hello from THE NEW server!" });
 });
 
 app.get("/forget", async(req, res) => {

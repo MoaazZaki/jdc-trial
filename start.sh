@@ -9,6 +9,7 @@ sudo chmod 777 default
 cp ~/jdc-trial/default default
 cd
 sudo nginx -s reload
+sudo docker run -d --rm --name dd-agent -v /var/run/docker.sock:/var/run/docker.sock:ro -v /proc/:/host/proc/:ro -v /sys/fs/cgroup/:/host/sys/fs/cgroup:ro -e DD_API_KEY=b5ab94713bb50f242a6b43aa21b2f4fa -e DD_SITE="datadoghq.com" gcr.io/datadoghq/agent:7
 cd jdc-trial
 sudo docker-compose up
 sudo docker update --restart unless-stopped $(sudo docker ps -q)
