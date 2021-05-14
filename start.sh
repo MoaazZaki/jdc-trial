@@ -3,7 +3,7 @@ sudo apt update
 sudo snap install docker 
 sudo apt install nginx
 sudo docker login -u moaazzaki -p meZooZem1999
-git clone https://MoaazZaki:meZooZem1999@github.com/MoaazZaki/jdc-trial.git
+git clone https://<user>:<password>@github.com/MoaazZaki/jdc-trial.git
 cd /etc/nginx/sites-enabled
 sudo chmod 777 default
 cp ~/jdc-trial/default default
