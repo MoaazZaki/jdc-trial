@@ -1,5 +1,6 @@
 #!/bin/bash
 sudo apt update
+sudo apt install jq
 sudo snap install docker 
 sudo apt install nginx
 sudo docker login -u <user> -p <password>
