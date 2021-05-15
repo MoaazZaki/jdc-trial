@@ -20,7 +20,7 @@ app.use(
 app.options('*', cors());
 
 app.get("/", (req, res) => {
-  res.json({ message: "Hello from the working CD server !!" });
+  res.json({ message: "Hello from the CD server !!" });
 });
 
 app.get("/forget", async(req, res) => {
