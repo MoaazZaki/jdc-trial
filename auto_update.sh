@@ -13,9 +13,6 @@ do
   sudo docker-compose stop  
   echo "(2/5)Removing.."
   sudo docker-compose rm -f
-  sudo docker rmi $(sudo docker images $SERVER -a -q)
-  sudo docker rmi $(sudo docker images $CLIENT -a -q)
-
   echo "(3/5)pulling.."
   sudo docker-compose pull
   fi
